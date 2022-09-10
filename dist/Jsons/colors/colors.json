@@ -1,0 +1,23 @@
+{
+  "color1":{
+    "dif_color":"#80ed99",
+    "active_color":"#c7f9cc",
+    "icons_color":"#2e2e2e",
+    "landing_color":"#1e1e1e",
+    "footer_color":"#22577a"
+  },
+  "color2":{
+    "dif_color":"#e76f51",
+    "active_color":"#f4a261",
+    "icons_color":"#2e2e2e",
+    "landing_color":"#1e1e1e",
+    "footer_color":"#264653"
+  },
+  "color3":{
+    "dif_color":"#d90429",
+    "active_color":"#ef233c",
+    "icons_color":"#2e2e2e",
+    "landing_color":"#1e1e1e",
+    "footer_color":"#2b2d42"
+  }
+}

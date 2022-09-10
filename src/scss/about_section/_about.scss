@@ -1,0 +1,84 @@
+.about {
+  padding: var(--main_padding) 0;
+  background-image: url("./../images/about/about_bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  .container {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    @media (max-width: 768px) {
+      & {
+        justify-content: center;
+        .text {
+          width: 100% !important;
+        }
+        .image {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .text {
+      white-space: nowrap;
+      z-index: 20;
+      overflow: hidden;
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      background-color: #fff;
+      color: black;
+      width: 80%;
+      padding: 30px;
+      p {
+        font-size: 20px;
+        line-height: 2;
+      }
+    }
+
+    .image {
+      height: 612px;
+      background-color: var(--icons_color);
+      position: relative;
+      transition: var(--main_transition);
+      -webkit-transition: var(--main_transition);
+      -moz-transition: var(--main_transition);
+      -ms-transition: var(--main_transition);
+      -o-transition: var(--main_transition);
+      &::before {
+        z-index: 5;
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+        background-color: var(--dif_color);
+        transition: var(--main_transition);
+        -webkit-transition: var(--main_transition);
+        -moz-transition: var(--main_transition);
+        -ms-transition: var(--main_transition);
+        -o-transition: var(--main_transition);
+      }
+      &:hover::before {
+        height: 100%;
+      }
+      img {
+        position: relative;
+        z-index: 10;
+        mix-blend-mode: luminosity;
+        transition: var(--main_transition);
+        -webkit-transition: var(--main_transition);
+        -moz-transition: var(--main_transition);
+        -ms-transition: var(--main_transition);
+        -o-transition: var(--main_transition);
+      }
+      &:hover img {
+        mix-blend-mode: unset;
+      }
+    }
+  }
+}

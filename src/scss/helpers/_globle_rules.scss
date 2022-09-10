@@ -1,0 +1,187 @@
+/* Font Family */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap");
+/* Start Media Screens Size */
+// Small (sm)
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+    margin: auto !important;
+  }
+}
+// Medium (md)
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+// Large (lg)
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+// Extra large (xl)
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+// Extra extra large (xxl)
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}
+// Extra small (xs)
+.container {
+  margin: 0 20px;
+}
+/* End Media Screens Size */
+
+/* Main Codes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  color: #f8f9fa;
+  position: relative;
+  background-color: var(--landing_color);
+}
+
+.main_heading {
+  width: fit-content;
+  font-size: 35px;
+  position: relative;
+  margin: auto;
+  font-weight: bolder;
+  user-select: none;
+  color: var(--icons_color);
+  &::before {
+    content: attr(data-heading_text);
+    color: var(--dif_color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    transition: var(--main_transition);
+    -webkit-transition: var(--main_transition);
+    -moz-transition: var(--main_transition);
+    -ms-transition: var(--main_transition);
+    -o-transition: var(--main_transition);
+  }
+  &:hover::before {
+    width: 100%;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    width: 5px;
+    height: 70%;
+    background-color: var(--dif_color);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transition: var(--main_transition);
+    -webkit-transition: var(--main_transition);
+    -moz-transition: var(--main_transition);
+    -ms-transition: var(--main_transition);
+    -o-transition: var(--main_transition);
+  }
+  &:hover::after {
+    left: calc(100% + 5px);
+  }
+}
+.section_line_left {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    width: 10px;
+    @media (max-width: 768px) {
+      & {
+        width: 5px;
+      }
+    }
+    height: 60%;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    background-color: var(--dif_color);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  }
+}
+.section_line_right {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    width: 10px;
+    @media (max-width: 768px) {
+      & {
+        width: 5px;
+      }
+    }
+    height: 60%;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    background-color: var(--dif_color);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  }
+}
+.heading_text {
+  font-size: 30px;
+  color: var(--dif_color);
+  font-weight: normal;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--icons_color);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  &:hover {
+    background-color: #444;
+  }
+}
+::-webkit-scrollbar-track {
+  background-color: var(--landing_color);
+}
+::-webkit-scrollbar-track-piece {
+  background-color: var(--landing_color);
+}

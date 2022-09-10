@@ -1,0 +1,109 @@
+.my_skills {
+  padding: var(--main_padding) 0;
+  .container {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      margin-bottom: 40px;
+    }
+    .skill_views {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 70px;
+      .view {
+        background-color: var(--icons_color);
+        color: var(--dif_color);
+        padding: 0 8px;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        width: fit-content;
+        height: fit-content;
+        cursor: pointer;
+        &.active {
+          color: #fff;
+          background-color: var(--dif_color);
+        }
+        i {
+          user-select: none;
+        }
+      }
+    }
+    .skills_grid_theme {
+      display: none;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+      .skill {
+        background-color: var(--icons_color);
+        padding: 20px;
+        text-align: center;
+        .iconSkill {
+          font-size: 60px;
+          color: var(--clr);
+        }
+      }
+      &.active {
+        display: grid;
+      }
+    }
+
+    .skills_progress_theme {
+      display: none;
+      flex-direction: column;
+      gap: 40px;
+      &.active {
+        display: flex;
+      }
+      .skill_progress {
+        .lable_skill {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .text {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+            .iconSkill {
+              font-size: 25px;
+              color: var(--clr);
+            }
+            .heading_text {
+              font-size: 25px;
+              color: #fff;
+            }
+          }
+          .progNum {
+            font-size: 20px;
+          }
+        }
+        .prog {
+          width: 100%;
+          height: 50px;
+          overflow: hidden;
+          border-radius: 3px;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          -ms-border-radius: 3px;
+          -o-border-radius: 3px;
+          background-color: var(--icons_color);
+          span {
+            display: block;
+            height: 100%;
+            background-color: var(--dif_color);
+            transition: 1s;
+            -webkit-transition: 1s;
+            -moz-transition: 1s;
+            -ms-transition: 1s;
+            -o-transition: 1s;
+          }
+        }
+      }
+    }
+  }
+}

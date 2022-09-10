@@ -1,0 +1,32 @@
+{
+  "skill1": {
+    "icon_class":"fa-brands fa-html5",
+    "color_icon":"#dc4a25",
+    "progress": 90,
+    "skill_name":"HTML"
+  },
+  "skill2": {
+    "icon_class":"fa-brands fa-css3-alt",
+    "color_icon":"#2862e9",
+    "progress": 80,
+    "skill_name":"CSS"
+  },
+  "skill3": {
+    "icon_class":"fa-brands fa-sass",
+    "color_icon":"#c76395",
+    "progress": 75,
+    "skill_name":"SCSS"
+  },
+  "skill4": {
+    "icon_class":"fa-brands fa-js",
+    "color_icon":"#efd81d",
+    "progress": 80,
+    "skill_name":"Javascript"
+  },
+  "skill5": {
+    "icon_class":"fa-brands fa-bootstrap",
+    "color_icon":"#981ff7",
+    "progress": 60,
+    "skill_name":"Bootstrap"
+  }
+}

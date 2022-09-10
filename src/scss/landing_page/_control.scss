@@ -1,0 +1,87 @@
+.div_control {
+  max-height: 500px;
+  flex-direction: column;
+
+  gap: 20px;
+  background-color: var(--landing_color);
+  position: fixed;
+  z-index: 20000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  box-shadow: 0 0 5px 0 #00000040;
+  width: 320px;
+  padding: 20px 0;
+  border-radius: 5px;
+  span {
+    display: flex;
+    padding: 0 20px;
+    width: 100%;
+    justify-content: flex-end;
+    transition: var(--main_transition);
+    -webkit-transition: var(--main_transition);
+    -moz-transition: var(--main_transition);
+    -ms-transition: var(--main_transition);
+    -o-transition: var(--main_transition);
+    color: var(--dif_color);
+    cursor: pointer;
+    &:hover {
+      color: var(--active_color);
+    }
+  }
+  > ul {
+    overflow-y: scroll;
+      padding: 0 20px;
+    &::-webkit-scrollbar {
+      width: 8px;
+      background-color: var(--landing_color);
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--icons_color);
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+    }
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    li.main_colors {
+      opacity: 0.5;
+      list-style: none;
+      cursor: pointer;
+      user-select: none;
+      > h5 {
+        letter-spacing: 2px;
+        font-size: 15px;
+        text-align: center;
+      }
+      .colorsBox {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        .colorSpan {
+          display: block;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          border: 0.1px solid #eee;
+        }
+      }
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}
