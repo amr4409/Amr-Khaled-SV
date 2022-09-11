@@ -906,6 +906,11 @@ header .content .arrow {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
+@media (max-width: 391px) {
+  .certificates .container .content {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
 .certificates .container .content > img {
   width: 100%;
   padding: 20px;
@@ -921,6 +926,20 @@ footer .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 50px;
+}
+@media (max-width: 576px) {
+  footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+  }
+}
+@media (max-width: 376px) {
+  footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 50px;
+  }
 }
 footer .container .heading_h3 {
   font-size: 30px;
@@ -970,8 +989,7 @@ footer .container .formsForMsg form {
 footer .container .formsForMsg form input,
 footer .container .formsForMsg form textarea {
   margin-bottom: 20px;
-  min-width: 100%;
-  max-width: 100%;
+  width: 100%;
   height: 50px;
   font-size: 20px;
   border-radius: 5px;
@@ -984,6 +1002,8 @@ footer .container .formsForMsg form textarea {
   padding: 10px 20px;
 }
 footer .container .formsForMsg form textarea {
+  min-width: 100%;
+  max-width: 100%;
   min-height: 200px;
 }
 footer .container .social_media_links_footer {

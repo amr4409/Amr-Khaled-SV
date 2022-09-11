@@ -1,11 +1,25 @@
 footer {
-  padding-top: var(--main_padding) ;
+  padding-top: var(--main_padding);
   padding-bottom: 50px;
   background-color: var(--icons_color);
   .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 50px;
+    @media (max-width: 576px) {
+      & {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 50px;
+      }
+    }
+    @media (max-width: 376px) {
+      & {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 50px;
+      }
+    }
     .heading_h3 {
       font-size: 30px;
       position: relative;
@@ -52,8 +66,7 @@ footer {
         input,
         textarea {
           margin-bottom: 20px;
-          min-width: 100%;
-          max-width: 100%;
+          width: 100%;
           height: 50px;
           font-size: 20px;
           border-radius: 5px;
@@ -66,6 +79,8 @@ footer {
           padding: 10px 20px;
         }
         textarea {
+          min-width: 100%;
+          max-width: 100%;
           min-height: 200px;
         }
       }
@@ -113,10 +128,10 @@ footer {
     width: 100%;
     text-align: center;
     word-spacing: 2px;
-      padding-top: 50px;
-      font-size: 20px;
-      span {
-        color: var(--dif_color);
-      }
+    padding-top: 50px;
+    font-size: 20px;
+    span {
+      color: var(--dif_color);
+    }
   }
 }
